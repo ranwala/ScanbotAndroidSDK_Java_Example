@@ -43,12 +43,14 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment:2.5.3")
     implementation("androidx.navigation:navigation-ui:2.5.3")
+    implementation("com.squareup.picasso:picasso:2.71828")
 
     implementation("io.scanbot:sdk-package-4:5.1.1")
     implementation("io.scanbot:sdk-package-ui:5.1.1")
     implementation("io.scanbot:rtu-ui-v2-bundle:5.1.1")
     implementation("io.scanbot:sdk-generictext-assets:5.1.1")
     implementation("io.scanbot:bundle-sdk-barcode-assets:5.1.1")
+    implementation("androidx.activity:activity:1.8.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

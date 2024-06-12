@@ -1,5 +1,6 @@
 package com.example.scanbotexample;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,7 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.scanbotexample.databinding.ActivityMainBinding;
 
+import java.util.List;
+
 import io.scanbot.sdk.camera.CameraPreviewMode;
+import io.scanbot.sdk.persistence.Page;
 import io.scanbot.sdk.ui.view.barcode.BarcodeScannerActivity;
 import io.scanbot.sdk.ui.view.barcode.configuration.BarcodeScannerConfiguration;
 import io.scanbot.sdk.ui.view.barcode.dialog.BarcodeConfirmationDialogConfiguration;
@@ -40,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 resultEntity -> {
 
                     if (resultEntity.getResultOk()) {
-                        // do something
+                        PageRepository.addPages(resultEntity.getResult());
+
+                        Intent intent = new Intent(this, PagePreviewActivity.class);
+                        startActivity(intent);
                     }
                 }
         );
