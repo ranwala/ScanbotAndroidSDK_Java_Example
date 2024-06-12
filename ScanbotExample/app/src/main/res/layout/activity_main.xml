@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
-    android:background="@color/cardview_light_background"
+    android:background="@color/colorPrimaryLight"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,13 +15,14 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:padding="20dp"
             android:fontFamily="sans-serif-medium"
+            android:background="@color/colorPrimary"
             android:text="Scanbot SKD RTU UI Example"
-            android:textColor="#000000"
-            android:textSize="34sp"
+            android:textColor="#ffffff"
+            android:textSize="28sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -37,7 +38,7 @@
             android:lineSpacingExtra="4sp"
             android:text="Document Scanner"
             android:textAllCaps="true"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="12sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -68,10 +69,10 @@
 
         <View
             android:layout_width="0dp"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:background="#1effffff"
+            android:background="@color/greyColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@id/camera_default_ui" />
@@ -87,6 +88,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@id/camera_default_ui" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/greyColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/qr_camera_default_ui" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
